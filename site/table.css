@@ -1,0 +1,92 @@
+body {
+   
+    background-image: url("img/pic.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.table {
+    width: 100%;
+    max-width: 1000px; /* задаем максимальную ширину таблицы */
+    margin: 0 auto; /* выравниваем по центру */
+  }
+  
+  th, td {
+    padding: 10px; /* задаем отступы внутри ячеек */
+    text-align: center; /* выравниваем текст по центру */
+  }
+  
+  th {
+    background-color: #eee; /* задаем фон для заголовков таблицы */
+    font-weight: bold; /* делаем заголовки жирными */
+  }
+  
+  input[type="text"] {
+    width: 100%; /* задаем ширину для всех input-элементов */
+    box-sizing: border-box; /* учитываем отступы и границы внутри input-элементов */
+  }
+
+
+  .btn {
+	text-decoration: none;
+	color: #6b5770;
+    
+	background-image: linear-gradient(90deg, #fd7f34, #bd155b);
+	display: inline-block;
+	padding: 14px 30px;
+	border: 1px solid;
+	position: relative;
+	z-index: 0;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin: 0 15px 15px 0;
+	outline: none;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;  
+}
+.btn:before {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+    text-align: center;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	background: linear-gradient(90deg, #fd7f34, #bd155b);
+	z-index: -2;
+	transition: .4s;
+	border-radius: 5px;
+}
+.btn:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+    text-align: center;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #fff, #fff);
+	z-index: -1;
+	transition: .4s;
+	border-radius: 4px;
+}
+.btn:hover {
+	color: #fff;
+	transition: .3s;
+}
+.btn:hover:after {
+	background: linear-gradient(90deg, #fd7f34, #bd155b);
+}
+.btn:active:after {
+	background: linear-gradient(90deg, #d96d2d, #760f3a);
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px #fd7f34;
+}
+.btn:disabled {
+	pointer-events: none;
+}
+.btn:disabled:before {
+	filter: grayscale(100%);
+}

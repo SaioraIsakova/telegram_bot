@@ -1,0 +1,8 @@
+{
+    "name": "myproject/mysubproject",
+    "type": "project",
+    "require": {
+        "php": ">=7.3",
+        "longman/telegram-bot": "^0.80.0"
+    }
+}
